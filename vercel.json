@@ -1,0 +1,20 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "functions": {
+    "src/pages/api/subjects/upload-pdf.js": {
+      "maxDuration": 60
+    },
+    "src/pages/api/subjects/generate.js": {
+      "maxDuration": 120
+    },
+    "src/pages/api/ai/chat.js": {
+      "maxDuration": 30
+    },
+    "src/pages/api/ai/explain.js": {
+      "maxDuration": 30
+    }
+  }
+}
