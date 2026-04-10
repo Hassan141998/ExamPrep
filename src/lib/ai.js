@@ -6,7 +6,7 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 export async function generateQuestions(pdfText, subjectName, count = 10, chapter = '') {
   const chapterCtx = chapter ? `Focus on: ${chapter}.` : ''
   const message = await client.messages.create({
-    model: 'claude-opus-4-5',
+    model: 'claude-sonnet-4-5',
     max_tokens: 4000,
     messages: [{
       role: 'user',
@@ -39,7 +39,7 @@ ${pdfText.slice(0, 8000)}`
 
 export async function generateFlashcards(pdfText, subjectName, count = 20) {
   const message = await client.messages.create({
-    model: 'claude-opus-4-5',
+    model: 'claude-sonnet-4-5',
     max_tokens: 4000,
     messages: [{
       role: 'user',
@@ -61,7 +61,7 @@ ${pdfText.slice(0, 8000)}`
 
 export async function explainTopic(pdfText, subjectName, question) {
   const message = await client.messages.create({
-    model: 'claude-opus-4-5',
+    model: 'claude-sonnet-4-5',
     max_tokens: 1000,
     messages: [{
       role: 'user',
@@ -79,7 +79,7 @@ ${pdfText.slice(0, 6000)}`
 
 export async function generateSummary(pdfText, subjectName) {
   const message = await client.messages.create({
-    model: 'claude-opus-4-5',
+    model: 'claude-sonnet-4-5',
     max_tokens: 2000,
     messages: [{
       role: 'user',

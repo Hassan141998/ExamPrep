@@ -29,7 +29,7 @@ Be concise, accurate, and exam-focused. Use examples where helpful. Format respo
     ]
 
     const response = await client.messages.create({
-      model: 'claude-opus-4-5',
+      model: 'claude-sonnet-4-5',
       max_tokens: 1000,
       system: systemPrompt,
       messages
